@@ -13,8 +13,8 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import handlebars from 'handlebars';
 import jwt from 'jsonwebtoken';
-import env from '../utils/evn.js';
-import { sendEmail } from '../utils/sendEmail.js';
+import env from '../utils/evn.ts';
+import { sendEmail } from '../utils/sendEmail.ts';
 
 export const registerUser = async (payload) => {
   const user = await UserCollection.findOne({ email: payload.email });
